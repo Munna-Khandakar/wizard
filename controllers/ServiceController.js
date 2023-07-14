@@ -28,7 +28,8 @@ module.exports.createService = async (req, res) => {
 
 module.exports.getService = async (req, res) => {
   try {
-    //TODO   get servive by id
+    const service = await ServeModel.findById(req?.params?.id);
+    return res.status(203).json(service);
   } catch (error) {
     return res.status(400).json({ error: "Something went wrong" });
   }

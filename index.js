@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 // TODO: Routes
 
 app.use("/api/services", require("./routes/ServiceRoute"));
+app.use("/api/users", require("./routes/UserRoute"));
 
 const PORT = process.env.PORT || 5000;
 mongoose
