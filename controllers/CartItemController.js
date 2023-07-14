@@ -1,6 +1,5 @@
 const CartItemModel = require("../models/CartItemModel");
 
-//!done
 module.exports.addItems = async (req, res) => {
   try {
     const newCart = new CartItemModel(req.body);
@@ -18,7 +17,6 @@ module.exports.addItems = async (req, res) => {
   }
 };
 
-//!done
 module.exports.getItem = async (req, res) => {
   try {
     const service = await CartItemModel.findOne({
@@ -31,7 +29,6 @@ module.exports.getItem = async (req, res) => {
   }
 };
 
-//!done
 module.exports.allItems = async (req, res) => {
   try {
     const service = await CartItemModel.find({
@@ -43,7 +40,6 @@ module.exports.allItems = async (req, res) => {
   }
 };
 
-//!done
 module.exports.updateItem = async (req, res) => {
   try {
     if (!req.body)
@@ -64,7 +60,6 @@ module.exports.updateItem = async (req, res) => {
   }
 };
 
-//!done
 module.exports.deleteItem = async (req, res) => {
   try {
     const deleteService = await CartItemModel.findOneAndDelete(
@@ -76,7 +71,7 @@ module.exports.deleteItem = async (req, res) => {
     return res.status(400).json({ error: "Something went wrong" });
   }
 };
-//!done
+
 module.exports.deleteItems = async (req, res) => {
   try {
     const deleteService = await CartItemModel.findOneAndDelete(
