@@ -16,8 +16,9 @@ app.use(bodyParser.json());
 app.use("/api/services", require("./routes/ServiceRoute"));
 app.use("/api/users", require("./routes/UserRoute"));
 app.use("/api/cartItem", require("./routes/CartItemRoute"));
-app.use("/api/billdetails", require("./routes/BillDetailsRoute"));
 app.use("/api/booking", require("./routes/BookTableRoute"));
+app.use("/api/billdetails", require("./routes/BillDetailsRoute"));
+app.use("/api/billstatus", require("./routes/BillStatusRoute"));
 
 const PORT = process.env.PORT || 5000;
 mongoose
