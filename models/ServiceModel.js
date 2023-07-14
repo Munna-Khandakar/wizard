@@ -36,4 +36,4 @@ const ServiceSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("admin", ServiceSchema);
+module.exports = mongoose.model("service", ServiceSchema);
